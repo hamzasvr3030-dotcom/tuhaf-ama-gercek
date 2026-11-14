@@ -1,0 +1,11 @@
+/* build.js üretir */
+.k-olaylar{--renk:#8e44ad}.r1-olaylar{--r1:#8e44ad}.r2-olaylar{--r2:#8e44ad}
+.k-hayvanlar{--renk:#e8833a}.r1-hayvanlar{--r1:#e8833a}.r2-hayvanlar{--r2:#e8833a}
+.k-uzay{--renk:#6c5ce7}.r1-uzay{--r1:#6c5ce7}.r2-uzay{--r2:#6c5ce7}
+.k-tarih{--renk:#b5838d}.r1-tarih{--r1:#b5838d}.r2-tarih{--r2:#b5838d}
+.k-bilim{--renk:#0984e3}.r1-bilim{--r1:#0984e3}.r2-bilim{--r2:#0984e3}
+.k-insan{--renk:#e84393}.r1-insan{--r1:#e84393}.r2-insan{--r2:#e84393}
+.k-yemek{--renk:#d19a00}.r1-yemek{--r1:#d19a00}.r2-yemek{--r2:#d19a00}
+.k-doga{--renk:#2e9e5b}.r1-doga{--r1:#2e9e5b}.r2-doga{--r2:#2e9e5b}
+.k-deniz{--renk:#0aa5b5}.r1-deniz{--r1:#0aa5b5}.r2-deniz{--r2:#0aa5b5}
+.k-turkiye{--renk:#d63031}.r1-turkiye{--r1:#d63031}.r2-turkiye{--r2:#d63031}

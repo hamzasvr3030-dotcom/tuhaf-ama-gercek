@@ -5,12 +5,11 @@
 **Site:** https://hamzasvr3030-dotcom.github.io/tuhaf-ama-gercek/
 
 ## Özellikler
-- 30 bilgi: 21 tuhaf bilgi + 9 gerçek **tuhaf olay** (Boston melas seli, 1518 dans vebası, Emu Savaşı…)
-- Her bilginin kendi sayfası (`bilgi.html?id=...`): kapak fotoğrafı, uzun açıklama, "Kısaca" künyesi, kaynaklar, benzer bilgiler
+- 30 konu: 21 tuhaf bilgi + 9 gerçek **tuhaf olay** (Boston melas seli, 1518 dans vebası, Emu Savaşı…)
+- **Her konunun kendi sayfası** (`bilgi/<id>.html`): kapak fotoğrafı, içindekiler, numaralı bölümler, bölüm aralarında açıklamalı fotoğraflar, "Kısaca" künyesi, "Biliyor muydun?" kutusu, kaynaklar, önceki/sonraki konu, benzer konular
 - Gerçek fotoğraflar: Wikimedia Commons'tan, yalnızca serbest lisanslı (kamu malı / CC). Tam liste: `gorseller.html`
-- Kategoriler: Tuhaf Olaylar, Hayvanlar, Uzay, Tarih, Bilim, İnsan, Yemek, Doğa, Deniz, Türkiye
-- Bir bilgi birden fazla kategoride yer alabilir (örneğin "Kediler tatlıyı tadamaz" → Hayvanlar + Yemek + Bilim)
-- Arama (Türkçe karakterlere duyarsız), rastgele bilgi, "Günün tuhaflığı" vitrini, kategori bağlantıları (`index.html?kategori=olaylar`)
+- Kategoriler: Tuhaf Olaylar, Hayvanlar, Uzay, Tarih, Bilim, İnsan, Yemek, Doğa, Deniz, Türkiye (bir konu birden çok kategoride olabilir)
+- Arama (Türkçe karakterlere duyarsız), rastgele konu, "Günün tuhaflığı" vitrini
 - Açık ve koyu tema otomatik seçilir
 
 ## Güvenilirlik kuralları
@@ -23,8 +22,8 @@
 - Sıkı Content-Security-Policy: yalnızca kendi dosyaları yüklenebilir.
 - Veriler sayfaya `textContent` ile yazılır (XSS'e karşı). Linklerde yalnızca `https` kabul edilir ve `noopener noreferrer` kullanılır.
 
-## Yeni bilgi ekleme
-`data.js` içindeki `BILGILER` listesine yeni bir nesne ekleyin:
+## Yeni konu ekleme
+1. `icerik/*.js` dosyalarından birine `BILGILER.push({...})` içine yeni bir nesne ekleyin:
 ```js
 {
   id: "benzersiz-id",
@@ -32,10 +31,11 @@
   baslik: "...",
   ozet: "Kartta görünen kısa açıklama",
   kunye: [["Tarih", "..."], ["Yer", "..."]],
-  paragraflar: ["1. paragraf", "2. paragraf", "3. paragraf"],
+  bolumler: [{ baslik: "Bölüm başlığı", paragraflar: ["...", "..."] }],
+  biliyorMuydun: ["...", "..."],
   kategoriler: ["hayvanlar", "bilim"],
   kaynaklar: [{ ad: "Kaynak adı", url: "https://..." }]
 }
 ```
-
-Fotoğraf eklemek için `img/<id>.jpg` dosyasını koyup `gorseller.js` içine yazar ve lisans bilgisini girin. Fotoğraf yoksa emoji ve renk geçişi gösterilir.
+2. Fotoğrafları `img/` ve `img/galeri/` klasörlerine koyup `gorseller.js` içine lisans bilgisiyle yazın.
+3. `node build.js` çalıştırın. Konu sayfaları (`bilgi/`), renk sınıfları (`renkler.css`), sürüm ekleri ve `sitemap.xml` yeniden üretilir.
