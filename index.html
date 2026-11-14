@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>Tuhaf Ama Gerçek</title>
+  <meta name="description" content="İnanması zor ama kaynaklarıyla doğrulanmış gerçek bilgiler.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A4%AF%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <span>🐙</span><span>🪐</span><span>🍯</span><span>🦩</span><span>🗿</span><span>🧊</span><span>⭐</span><span>🍄</span>
+    </div>
+    <div class="hero-icerik">
+      <h1>Tuhaf <em>Ama</em> Gerçek</h1>
+      <p>İnanması zor ama <strong>her biri kaynaklarıyla doğrulanmış</strong> bilgiler.</p>
+      <div class="arama-satir">
+        <input id="arama" type="search" placeholder="Bilgi ara… (örn. ahtapot, uzay, bal)" aria-label="Bilgi ara" autocomplete="off">
+        <button id="rastgele" type="button" title="Rastgele bir bilgi göster">🎲 Rastgele</button>
+      </div>
+    </div>
+  </header>
+
+  <nav id="kategoriler" class="kategoriler" aria-label="Kategoriler"></nav>
+
+  <main>
+    <p id="sayac" class="sayac"></p>
+    <section id="kartlar" class="kartlar" aria-live="polite"></section>
+  </main>
+
+  <dialog id="detay" aria-labelledby="detay-baslik">
+    <div class="detay-ust" id="detay-ust"><span id="detay-emoji"></span></div>
+    <div class="detay-govde">
+      <div id="detay-etiketler" class="etiketler"></div>
+      <h2 id="detay-baslik"></h2>
+      <p id="detay-aciklama"></p>
+      <div class="kaynak-kutu">
+        <h3>✅ Kaynaklar</h3>
+        <ul id="detay-kaynaklar"></ul>
+      </div>
+      <div class="detay-butonlar">
+        <button id="paylas" type="button">🔗 Bağlantıyı kopyala</button>
+        <button id="kapat" type="button">Kapat</button>
+      </div>
+    </div>
+  </dialog>
+
+  <footer>
+    <p>Her bilgi en az bir güvenilir kaynağa (bilim kurumu, ansiklopedi, hakemli makale, resmî kurum) dayanır.
+      Hata gördüysen <a href="https://github.com/hamzasvr3030-dotcom/tuhaf-ama-gercek/issues" target="_blank" rel="noopener noreferrer">bildir</a>.</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
