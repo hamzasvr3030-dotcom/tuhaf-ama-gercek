@@ -10,7 +10,7 @@
 - Gerçek fotoğraflar: Wikimedia Commons'tan, yalnızca serbest lisanslı (kamu malı / CC). Tam liste: `gorseller.html`
 - Kategoriler: Tuhaf Olaylar, Hayvanlar, Uzay, Tarih, Bilim, İnsan, Yemek, Doğa, Deniz, Türkiye
 - Bir bilgi birden fazla kategoride yer alabilir (örneğin "Kediler tatlıyı tadamaz" → Hayvanlar + Yemek + Bilim)
-- Arama (Türkçe karakterlere duyarsız), rastgele bilgi, paylaşılabilir bağlantı (`#bilgi-id`)
+- Arama (Türkçe karakterlere duyarsız), rastgele bilgi, "Günün tuhaflığı" vitrini, kategori bağlantıları (`index.html?kategori=olaylar`)
 - Açık ve koyu tema otomatik seçilir
 
 ## Güvenilirlik kuralları
